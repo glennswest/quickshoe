@@ -23,18 +23,19 @@ module qshoe()
    translate([27,60,0]) cylinder($fn=100,r=1.8,h=12);  
    translate([-27, 60,0]) cylinder($fn=100,r=1.8,h=12);
    translate([26.2,-2,-1.2]) cube([17.1,3,12.2]);   
-   translate([0,90,5]) rotate([90,0,0]) cylinder(r=1.5,h=30);   
+   translate([0,90,5]) rotate([90,0,0]) cylinder(r=1.5,h=30);  
+   translate([23,-2,-1.2]) cube([22.1,3.3,12.2]);   
    }
      
    difference(){
      translate([27,-8,0]) cube([18,14,10]);
-     translate([27,-2,-1.2]) cube([18.1,3.3,12.2]);
+     translate([23,-2,-1.2]) cube([22.1,3.3,12.2]);
      translate([40,9,4.5]) rotate([90,0,0]) cylinder($fn=100,r=1.8,h=10); 
      translate([40,-1.5,4.5]) rotate([90,0,0]) cylinder($fn=100,r=1.5,h=10);   
      }
 }
 
 
-//projection(cut=true) translate([0,0,10]) rotate([180,0,0]) qshoe();
-translate([0,0,10]) rotate([180,0,0]) qshoe();
+projection(cut=true) translate([0,0,10]) rotate([180,0,0]) qshoe();
+//translate([0,0,10]) rotate([180,0,0]) qshoe();
    
